@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/fiorello_project.props" />
+</Project>

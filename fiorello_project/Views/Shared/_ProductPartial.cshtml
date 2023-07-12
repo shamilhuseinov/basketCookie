@@ -1,0 +1,48 @@
+﻿@using fiorello_project.ViewModels.Product
+@model ProductLoadMoreViewModel
+
+
+@foreach (var product in Model.Products)
+{
+    <div class="mkdf-pli mkdf-item-space ">
+        <div class="mkdf-pli-inner">
+            <div class="mkdf-pli-image">
+                <span class="mkdf-pli-new-product">@product.Status</span>
+                <img width="620" height="800" src="~/assets/img/@product.MainPhotoName" class="attachment-woocommerce_single size-woocommerce_single wp-post-image" alt="c" loading="eager" sizes="(max-width: 620px) 100vw, 620px">
+            </div>
+            <a class="mkdf-pli-link" itemprop="url" asp-action="details" asp-controller="product" asp-route-id="@product.Id" title="Orange Amaryllis"></a>
+        </div>
+        <div class="mkdf-pli-text-wrapper">
+            <h6 itemprop="name" class="entry-title mkdf-pli-title">
+                <a itemprop="url" href="../../product/orange-amaryllis/index.html">
+
+                    @product.Title
+                </a>
+            </h6>
+            <div class="mkdf-pli-add-to-cart mkdf-default-skin">
+                <a rel="nofollow" href="indexa528.html?add-to-cart=251" data-quantity="1" data-product_id="251" data-product_sku="989873" class="button add_to_cart_button ajax_add_to_cart mkdf-button">
+
+                    Add
+                    to cart
+
+                </a>
+            </div>
+            <div class="mkdf-pli-price">
+
+                <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>@product.Price</span>
+            </div>
+        </div>
+    </div>
+}
+
+@if (Model.Islast)
+{
+    <script type="text/javascript">
+        jQuery(document).ready((function($) {
+            function myFunc() {
+                $("#Tural").remove();
+            }
+            myFunc();
+        }))
+    </script>
+}

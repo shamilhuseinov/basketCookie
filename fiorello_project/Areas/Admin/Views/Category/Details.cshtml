@@ -1,0 +1,41 @@
+﻿@using fiorello_project.Areas.Admin.ViewModels.Category
+@model CategoryDetailsViewModel
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            DElete Category
+                        </p>
+
+                            <span>Id:</span>
+                        <span>@Model.Id</span>
+
+                              <br />
+                        <br />
+
+                        <span>TITLE:</span>
+                        <span>@Model.Title</span>
+
+                  
+
+                     
+                       
+
+                        
+
+                      
+                        
+
+                    </div>
+                    <button>
+                            <a class="btn btn-light" asp-action="index" asp-controller="category" asp-area="admin">Cancel</a>
+                        </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

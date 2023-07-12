@@ -1,0 +1,35 @@
+﻿@using fiorello_project.ViewModels.Basket
+@model List<BasketModel>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Title</th>
+            <th scope="col">Count</th>
+            <th scope="col">Stock Quantity</th>
+            <th scope="col">Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var basketProduct in Model)
+        {
+            <tr>
+                <th>@basketProduct.Id</th>
+                <td> <img style="max-width:200px" src="~assets/img/@basketProduct.PhotoName" /></td>
+                <td>@basketProduct.Title</td>
+                <td class="count">@basketProduct.Count</td>
+                <td>@basketProduct.StockQuantity</td>
+                <td>
+                    <a id="increaseCount" class="btn btn-success" data-id="@basketProduct.Id">+</a>
+                    <a id="decreaseCount" class="btn btn-danger" data-id="@basketProduct.Id" >-</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+
+@section Scripts{
+    <script src="~/assets/js/basket.js"></script>
+}

@@ -1,0 +1,98 @@
+﻿@using fiorello_project.ViewModels.Product
+@model ProductIndexViewModel
+<div class="mkdf-content">
+    <div class="mkdf-content-inner">
+        <div class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-title-content-va-middle"
+             style="height: 225px;background-color: #fafaf9" data-height="225">
+            <div class="mkdf-title-wrapper" style="height: 225px">
+                <div class="mkdf-title-inner">
+                    <div class="mkdf-grid">
+                        <h1 class="mkdf-page-title entry-title">Without Sidebar</h1>
+                        <span class="mkdf-page-subtitle">Where flowers are our inspiration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mkdf-container mkdf-default-page-template">
+            <div class="mkdf-container-inner clearfix">
+                <div class="mkdf-grid-row">
+                    <div class="mkdf-page-content-holder mkdf-grid-col-12">
+                        <section class="wpb-content-wrapper">
+                            <div class="vc_row wpb_row vc_row-fluid">
+                                <div class="wpb_column vc_column_container vc_col-sm-12">
+                                    <div class="vc_column-inner">
+                                        <div class="wpb_wrapper">
+                                            <div class="mkdf-pl-holder mkdf-standard-layout mkdf-medium-space mkdf-four-columns mkdf-info-below-image "
+                                                 data-type="standard" data-info-position="info-below-image"
+                                                 data-number-of-posts="12" data-number-of-columns="4"
+                                                 data-space-between-items="medium"
+                                                 data-show-ordering-filter="no" data-orderby="date"
+                                                 data-order="ASC" data-show-category-filter="no"
+                                                 data-show-all-item-in-filter="yes"
+                                                 data-taxonomy-to-display="category" data-display-title="yes"
+                                                 data-title-tag="h6" data-display-category="no"
+                                                 data-display-rating="no" data-display-price="yes"
+                                                 data-display-button="yes" data-button-skin="default"
+                                                 data-class-name="pli"
+                                                 data-layout-classes="mkdf-pli-hover-overlay">
+                                                <div class="mkdf-prl-loading">
+                                                    <span class="mkdf-prl-loading-msg">Loading...</span>
+                                                </div>
+                                                <div id="avara" class="mkdf-pl-outer mkdf-outer-space">
+                                                    @foreach (var product in Model.Products)
+                                                    {
+                                                        <div class="mkdf-pli mkdf-item-space ">
+                                                            <div class="mkdf-pli-inner">
+                                                                <div class="mkdf-pli-image">
+                                                                    <span class="mkdf-pli-new-product">@product.Status</span>
+                                                                    <img width="620" height="800" src="~/assets/img/@product.MainPhotoName" class="attachment-woocommerce_single size-woocommerce_single wp-post-image" alt="c" loading="eager" sizes="(max-width: 620px) 100vw, 620px">
+                                                                </div>
+                                                                <a class="mkdf-pli-link" itemprop="url" asp-action="details" asp-controller="product" asp-route-id="@product.Id" title="Orange Amaryllis"></a>
+                                                            </div>
+                                                            <div class="mkdf-pli-text-wrapper">
+                                                                <h6 itemprop="name" class="entry-title mkdf-pli-title">
+                                                                    <a itemprop="url" href="../../product/orange-amaryllis/index.html">
+
+                                                                        @product.Title
+                                                                    </a>
+                                                                </h6>
+                                                                <div class="mkdf-pli-add-to-cart mkdf-default-skin">
+                                                                    <a rel="nofollow" href="indexa528.html?add-to-cart=251" data-quantity="1" data-product_id="251" data-product_sku="989873" class="button add_to_cart_button ajax_add_to_cart mkdf-button">
+
+                                                                        Add
+                                                                        to cart
+
+                                                                    </a>
+                                                                </div>
+                                                                <div class="mkdf-pli-price">
+
+                                                                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>@product.Price</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                </div>
+
+                                            </div>
+                                                <div class="d-flex justify-content-center">
+                                                    <button id="Tural" class="btn btn-danger">Load more</button>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mkdf-content-bottom">
+            <div class="mkdf-content-bottom-inner mkdf-full-width">
+                <div class="widget widget_mkdf_instagram_widget"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
